@@ -1,44 +1,178 @@
 
 
-.body{
+*{
+
 
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: poppins;
+}
+
+
+.body{
+
 
     display: grid;
     background-color: white;
     grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     
-        header
-        main
-        footer
+        "header header header"
+        "main main main"
+        "footer footer footer"
 
     ;
+    gap: 32px;
+
+    
 
 }
 
 
 .Header{
-   background-color: aquamarine;
+ 
    grid-area: header;
+   background-color: rgb(255, 255, 255);
+   display: flex;
+   justify-content: space-between;
+   font-size: 14px;
+   align-items: center;
+   padding: 0 24px;
+   position: sticky;
+   top: 0;
+   z-index: 1;
 }
 
-.Header-nav{
-    
+.Header-nav ul{
     display: flex;
+    list-style: none;
+    gap: 40px;
+
+    
+   
+}
+
+
+.isActive{
+    text-decoration: underline;
+}
+
+
+.logo{
+    width: 65px;
+    height: 25px;
+
 }
 
 
 .main{
     grid-area: main;
+    width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction:column ;
+    padding:32px;
+   
+    gap: 32px;
+}
+
+
+.Main-p{
+    font-size: 14px;
+    width: 50%;
+}
+
+.Main-button{
+    border: none;
+    background-color: white;
+    padding-bottom:100px ;
+}
+
+
+
+.Footer{
+    font-size: 12px;
+    display: flex;
+    grid-area: footer;
+    justify-content: space-between;
+    align-items: center;
+    padding:24px;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    
+}
+
+
+.Footer-ulRrss{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+
+
+.Imagenes{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1f 1f 1f 1f;
+
+    grid-template-areas: 
+    
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8"
+    "img9 img10 img11 img12"
+    
+    ;
+    gap: 10px;
+}
+
+
+.Imagenes-img{
+    width: 100%;
+    height: 100%;
 
 }
 
-.Footer{
-    display: flex;
-    justify-content: space-between;
-    
+
+.Imagenes-img1{
+    grid-area: img1;
+}
+.Imagenes-img2{
+
+    grid-area: img2;
+}
+.Imagenes-img3{
+    grid-area:img3 ;
+}
+.Imagenes-img4{
+    grid-area:img4 ;
+}
+.Imagenes-img5{
+    grid-area:img5 ;
+}
+.Imagenes-img6{
+    grid-area:img6 ;
+}
+.Imagenes-img7{
+    grid-area: img7;
+}
+.Imagenes-img8{
+    grid-area: img8;
+}
+.Imagenes-img9{
+    grid-area:img9 ;
+}
+.Imagenes-img10{
+    grid-area: img10;
+}
+.Imagenes-img11{
+    grid-area:img11 ;
+}
+.Imagenes-img12{
+    grid-area:img12;
 }
